@@ -15,15 +15,6 @@
                 position: sticky;
                 top: 0;
             }
-            .header-title {
-                font-weight: bold;
-                font-size: 2.5em; /* 더 큰 폰트 크기 */
-                color: #333;
-                transition: transform 0.3s; /* 애니메이션 효과 */
-            }
-            .header-title:hover {
-                transform: scale(1.05); /* 호버 시 확대 효과 */
-            }
             .header-location {
                 font-weight: 600; /* 약간의 굵기 */
                 font-size: 1.2em; /* 크기 조정 */
@@ -36,14 +27,19 @@
                 ); /* 그라디언트 배경 */
                 padding: 20px; /* 패딩 추가 */
             }
-            .fade-out {
-                opacity: 0.5; /* 투명도를 0.5로 설정하여 완전히 사라지지 않게 함 */
-                transition: opacity 0.7s ease; /* 부드러운 전환 효과 */
-            }
             .research-meta p {
                 font-size: 15px; /* 폰트 크기를 17px로 조정 */
                 line-height: 1.5; /* 줄 간격 조정 */
                 letter-spacing: 0.04em; /* 레터 스페이싱 추가 */
+            }
+            .outcome-text {
+                margin-top: 0.7rem;
+                margin-bottom: 1rem;
+            }
+            .outcome-text p {
+                line-height: 1.5;
+                font-size: 16px;
+                letter-spacing: 0.04em;
             }
         </style>
     </head>
@@ -57,26 +53,33 @@
                     Hello, i create meaningful digital experiences by combining
                     digital product design with user experience and visual
                     design. With a background in
-                    <strong>graphic and web design</strong> ,as well as
-                    <strong> web development</strong> ,I focus on enhancing
-                    human interaction with technology. <br /><br />
+                    <strong style="font-weight: 500"
+                        >graphic and web design</strong
+                    >
+                    ,as well as
+                    <strong style="font-weight: 500"> web development</strong>
+                    ,I focus on enhancing human interaction with technology.
+                    <br /><br />
                     Feel free to connect with me on
                     <a
                         href="https://www.linkedin.com/in/soyeonlee2"
                         target="_blank"
                         class="hover-link"
+                        style="font-weight: 500"
                         >LinkedIn</a
                     >,
                     <a
                         href="https://www.instagram.com/soyeonlee2"
                         target="_blank"
                         class="hover-link"
+                        style="font-weight: 500"
                         >Instagram</a
                     >, or check out my projects on
                     <a
                         href="https://github.com/leeyirie"
                         target="_blank"
                         class="hover-link"
+                        style="font-weight: 500"
                         >GitHub</a
                     >.
                 </p>
@@ -87,33 +90,31 @@
                 <span class="label">CONTENTS</span>
                 <div class="contents-meta">
                     <div class="meta-item">
-                        <span class="meta-label">1. 은행 웹사이트 디자인</span>
-                        <span class="meta-value">2021년 2월</span>
+                        <span class="meta-label"
+                            >1. Banking website Design</span
+                        >
+                        <span class="meta-value">2021.02</span>
                     </div>
                     <div class="meta-item">
-                        <span class="meta-label"
-                            >2. 코딩 알고리즘 학습 웹사이트</span
-                        >
-                        <span class="meta-value">2024년 4월 - 5월</span>
+                        <span class="meta-label">2. CodeEasy</span>
+                        <span class="meta-value">2024.04 - 05</span>
                     </div>
                     <div class="meta-item">
-                        <span class="meta-label"
-                            >3. 공연예술 커뮤니티 웹앱</span
-                        >
-                        <span class="meta-value">2024년 6월 - 7월</span>
+                        <span class="meta-label">3. GroovyMap</span>
+                        <span class="meta-value">2024.06 - 07</span>
                     </div>
                 </div>
             </section>
         </div>
 
         <div class="research-container">
-            <!-- 프로젝트 1: 헬스케어 플랫폼 -->
+            <!-- 프로젝트 1: 은행 웹 사이트 디자인 -->
             <section id="Banking" class="research-section">
                 <header class="research-header">
-                    <p style="font-size: 2em; font-weight: bold">Web Design</p>
+                    <p>Web Design</p>
                     <div class="header-location">
-                        <span class="header-title">은행 웹사이트 디자인</span>
-                        <span class="header-location">2021년</span>
+                        <span class="header-title">Banking Website Design</span>
+                        <span class="header-location">2021</span>
                     </div>
                 </header>
                 <div class="research-content">
@@ -122,13 +123,12 @@
                             <h2>프로젝트 개요:</h2>
                             <p>
                                 사용자 친화적인 웹디자인을 기반으로 한 가상의
-                                모바일 은행 웹사이트 프로젝트입니다. 이
-                                프로젝트는 사용자 경험을 최우선으로 고려하여
-                                설계되었습니다.
+                                모바일 은행 웹사이트 프로젝트입니다. 직관적인
+                                인터페이스와 효율적인 기능을 통해 사용자가 쉽게
+                                접근하고 원하는 서비스를 이용할 수 있도록 디자인
+                                되었습니다.
                             </p>
-                            <p>
-                                <strong>프로젝트 인원:</strong> 1명 (혼자 제작)
-                            </p>
+                            <p><strong>프로젝트 인원:</strong> 개인 프로젝트</p>
                             <p><strong>사용 도구:</strong> Figma</p>
 
                             <h2 style="margin-top: 20px">Project Overview:</h2>
@@ -139,40 +139,102 @@
                             </p>
                             <p>
                                 <strong>Team Size:</strong> 1 person
-                                (individually developed)
+                                (individually created)
                             </p>
+
                             <p><strong>Tools Used:</strong> Figma</p>
                         </div>
                     </div>
 
                     <div class="research-outcomes">
                         <div class="outcome-grid">
+                            <!-- 전체 컨셉 및 타깃 소개 -->
                             <article class="outcome-item">
                                 <img
-                                    src="https://images.unsplash.com/photo-1576091160550-2173dba999ef"
-                                    alt="Healthcare Interface"
+                                    src="images/bank_web.png"
+                                    alt="Conceptual mockup of the digital banking platform"
+                                    style="
+                                        width: 100%;
+                                        height: auto;
+                                        margin-bottom: 1rem;
+                                    "
                                 />
-                                <p>
-                                    초기 사용자 리서치 단계에서는 현재 의료
-                                    시스템의 디지털화 과정에서 발생하는 핵심
-                                    문제점들을 파악하는 데 중점을 두었습니다.
-                                    특히, 고령 사용자들의 디지털 접근성 문제가
-                                    가장 큰 과제로 대두되었습니다.
-                                </p>
+                                <div class="outcome-text">
+                                    <p style="margin-bottom: 1rem">
+                                        <strong
+                                            >프리랜서, 스타트업 창업자, 소규모
+                                            사업자</strong
+                                        >를 주요 타깃으로 한 가상의 디지털 뱅킹
+                                        플랫폼을 기획한 작업입니다. 전통적인
+                                        금융 서비스의 딱딱함을 탈피하고,
+                                        <strong>젊고 활기찬 이미지</strong>를
+                                        전달하기 위해 생동감 있는 색감과 모던한
+                                        디자인 요소를 적극 활용했습니다. 디자인
+                                        컨셉은 단순히 기능적 요구를 넘어,
+                                        사용자에게 금융 서비스를 보다 친근하고
+                                        접근하기 쉽게 전달하는 데 초점을
+                                        맞췄습니다. 이를 통해 기존의 금융
+                                        시스템에서 느낄 수 있는 부담감을 줄이고,
+                                        새로운 경험을 선사하고자 하였습니다.
+                                    </p>
+                                    <p style="margin-bottom: 1rem">
+                                        <strong>Overall Concept:</strong> This
+                                        project was conceived as an innovative
+                                        digital banking platform targeting
+                                        freelancers, startup founders, and small
+                                        business owners. The design breaks away
+                                        from the rigid image of traditional
+                                        banking by incorporating a fresh,
+                                        vibrant aesthetic. By utilizing a bold
+                                        color palette and modern design
+                                        elements, the concept aims to provide an
+                                        approachable and engaging financial
+                                        service experience.
+                                    </p>
+                                </div>
                             </article>
 
+                            <!-- 상세 기능 및 레이아웃 설명 -->
                             <article class="outcome-item">
                                 <img
-                                    src="https://images.unsplash.com/photo-1576091160291-31d7e3e0fdb1"
-                                    alt="User Testing"
+                                    src="images/bank_web2.png"
+                                    alt="Detailed layout showcasing key features of the banking service"
+                                    style="
+                                        width: 100%;
+                                        height: auto;
+                                        margin-bottom: 1rem;
+                                    "
                                 />
-                                <p>
-                                    프로토타입 테스트 결과, 65세 이상 사용자
-                                    그룹의 태스크 완료율이 기존 40%에서 85%로
-                                    크게 향상되었습니다. 음성 안내 기능과 고대비
-                                    모드를 추가하여 WCAG 2.1 AA 기준을 충족하는
-                                    접근성을 확보했습니다.
-                                </p>
+                                <div class="outcome-text">
+                                    <p style="margin-bottom: 1rem">
+                                        <strong
+                                            >은행 특징 및 카드 종류별
+                                            혜택</strong
+                                        >
+                                        등 핵심 기능을 직관적으로 배치하여
+                                        사용자가 쉽게 원하는 서비스를 찾을 수
+                                        있도록 구성하였습니다. 텍스트와 아이콘의
+                                        적절한 조합으로
+                                        <strong>가독성</strong>과
+                                        <strong>정보 전달력</strong>을
+                                        극대화하여, 중요한 요소는 자연스럽게
+                                        눈에 띄도록 디자인하였습니다.
+                                    </p>
+                                    <p style="margin-bottom: 1rem">
+                                        <strong>Detailed Features:</strong> The
+                                        layout clearly organizes key
+                                        functionalities such as account
+                                        creation, fund management, and money
+                                        transfers, mirroring a live interface.
+                                        The strategic balance of text and icons
+                                        ensures that users can quickly
+                                        understand the purpose of each feature.
+                                        Critical elements are highlighted to
+                                        capture user attention, creating a
+                                        seamless and intuitive navigation
+                                        experience throughout the platform.
+                                    </p>
+                                </div>
                             </article>
                         </div>
                     </div>
@@ -182,9 +244,7 @@
             <!-- 프로젝트 2: 교육 플랫폼 -->
             <section id="CodeEasy" class="research-section">
                 <header class="research-header">
-                    <p style="font-size: 2em; font-weight: bold">
-                        Design & Development
-                    </p>
+                    <p>Design & Development</p>
                     <div class="header-location">
                         <span class="header-title">CodeEasy</span>
                         <span class="header-location">2024</span>
@@ -196,26 +256,39 @@
                         <div class="research-meta">
                             <p>
                                 저시력자를 위한 코딩 알고리즘 학습
-                                웹사이트입니다. 이 웹사이트는 저시력자를
-                                고려하여 컬러감을 강조하고, 접근성을 최우선으로
-                                설계되었습니다.
+                                웹사이트입니다. 주 사용자인 저시력자를 고려하여
+                                컬러감을 강조하고, 음성 TTS 기능 등 접근성을
+                                최우선으로 설계되었습니다.
                             </p>
                             <p>
                                 <strong>프로젝트 인원:</strong> 프론트엔드 팀
                                 3명, 백엔드 팀 3명
                             </p>
+
+                            <p>
+                                <strong>프로젝트 기여도: </strong>로고, 메인
+                                화면 페이지, 알고리즘 문제 페이지, 채팅 기능
+                                구현
+                            </p>
                             <p><strong>사용 도구:</strong> Figma, React</p>
 
                             <h2 style="margin-top: 20px">Project Overview:</h2>
                             <p>
-                                This website is designed for visually impaired
-                                individuals to learn coding algorithms. It
+                                This website is designed for individuals with
+                                low vision to learn coding algorithms. It
                                 emphasizes color schemes that are accessible for
-                                low-vision users and prioritizes usability.
+                                visually impaired users and prioritizes
+                                accessibility features such as text-to-speech
+                                (TTS) functionality.
                             </p>
                             <p>
                                 <strong>Team Size:</strong> 3 frontend
                                 developers, 3 backend developers
+                            </p>
+                            <p>
+                                <strong>Contributions:</strong> Implemented the
+                                main page, algorithm problem page, and chat
+                                functionality.
                             </p>
                             <p><strong>Tools Used:</strong> Figma, React</p>
                         </div>
@@ -224,30 +297,132 @@
                     <div class="research-outcomes">
                         <div class="outcome-grid">
                             <article class="outcome-item">
-                                <img
-                                    src="https://images.unsplash.com/photo-1576091160550-2173dba999ef"
-                                    alt="Education Interface"
-                                />
-                                <p>
-                                    이 프로젝트에서는 다양한 연령대의 학습자들을
-                                    위한 맞춤형 교육 경험을 제공하기 위해
-                                    리서치를 진행했습니다. 특히, 온라인 학습의
-                                    접근성과 사용자 경험을 개선하는 데 중점을
-                                    두었습니다.
-                                </p>
+                                <img src="images/codeEasy.png" />
+                                <div class="outcome-text">
+                                    <p>
+                                        <strong>코드이지(CodeEasy)</strong>는
+                                        저시력자도 쉽게 접근하여 알고리즘 문제를
+                                        풀고 학습할 수 있는 웹사이트입니다.
+                                        04.20 장애인의 날을 맞아, 웹 사용 시
+                                        불편함을 겪는 사용자들을 위해 음성 TTS,
+                                        화면 확대, 고대비 테마, 큰 글씨 등
+                                        다양한 접근성 기능을 적용하였습니다.
+                                    </p>
+
+                                    <p>
+                                        <br />
+                                        CodeEasy is a website designed for
+                                        individuals with low vision to easily
+                                        access and learn coding algorithms. In
+                                        honor of the Day of Persons with
+                                        Disabilities on April 20, various
+                                        accessibility features such as voice
+                                        TTS, screen magnification, high-contrast
+                                        themes, and large text have been
+                                        implemented to assist users who face
+                                        difficulties while using the web.
+                                    </p>
+                                </div>
                             </article>
 
+                            <div
+                                class="video-container"
+                                style="text-align: center; margin-top: 25px"
+                            >
+                                <object
+                                    width="100%"
+                                    height="500"
+                                    data="https://www.youtube.com/embed/6yafEg4OOfE"
+                                    frameborder="0"
+                                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                    allowfullscreen
+                                ></object>
+                            </div>
                             <article class="outcome-item">
-                                <img
-                                    src="https://images.unsplash.com/photo-1576091160291-31d7e3e0fdb1"
-                                    alt="User Testing"
-                                />
-                                <p>
-                                    사용자 테스트 결과, 학습자들이 플랫폼을 통해
-                                    더 나은 학습 경험을 얻을 수 있었으며,
-                                    피드백을 통해 지속적으로 개선할 수 있는
-                                    기회를 발견했습니다.
-                                </p>
+                                <div class="outcome-text">
+                                    <br />
+                                    <p
+                                        style="
+                                            margin-top: 1rem;
+                                            margin-bottom: 1rem;
+                                        "
+                                    >
+                                        <strong>핵심 기능 & UI/UX 설계</strong
+                                        ><br />
+                                        테마 설정 페이지에서 다크, 라이트,
+                                        고대비 모드를 자유롭게 전환할 수 있어,
+                                        사용자가 자신의 시각적 요구에 맞게
+                                        인터페이스를 조절할 수 있습니다. 또한,
+                                        음성 TTS 기능을 통해 메뉴, 문제, 정답,
+                                        풀이 등의 내용을 음성으로 안내하며, 화면
+                                        확대 기능으로 콘텐츠를 더욱 쉽게 확인할
+                                        수 있도록 설계하였습니다.
+                                    </p>
+                                    <p style="margin-bottom: 1rem">
+                                        <strong
+                                            >Development & Interaction:</strong
+                                        ><br />
+                                        프론트엔드에서는 React와 TypeScript,
+                                        SCSS를 활용해 모듈화된 컴포넌트를
+                                        개발하고, Recoil을 통한 효율적인
+                                        상태관리를 구현했습니다. 각 팀원은 메인
+                                        홈, 알고리즘 문제 페이지, 채팅,
+                                        로그인/회원가입, 마이 페이지, 테마 설정,
+                                        문제 IDE 등 다양한 영역에서 핵심 기능을
+                                        맡아 프로젝트의 완성도를 높였습니다.
+                                    </p>
+                                    <p style="margin-bottom: 1rem">
+                                        <strong>UX Focus:</strong><br />
+                                        사용자 경험을 최우선으로 고려하여,
+                                        누구나 쉽게 접근하고 사용할 수 있는
+                                        인터페이스를 제공하는 동시에, 시각적
+                                        접근성 개선을 통한 몰입감 있는 학습
+                                        환경을 구현했습니다.
+                                    </p>
+                                    <br />
+
+                                    <p style="margin-bottom: 1rem">
+                                        <strong
+                                            >Key Features & UI/UX
+                                            Design:</strong
+                                        ><br />
+                                        The theme settings page allows users to
+                                        freely switch between dark, light, and
+                                        high-contrast modes, enabling them to
+                                        adjust the interface according to their
+                                        visual needs. Additionally, the voice
+                                        TTS feature provides audio guidance for
+                                        menus, problems, answers, and solutions,
+                                        while the screen magnification feature
+                                        is designed to make content easier to
+                                        view.
+                                    </p>
+                                    <p style="margin-bottom: 1rem">
+                                        <strong
+                                            >Development & Interaction:</strong
+                                        ><br />
+                                        The frontend was developed using React,
+                                        TypeScript, and SCSS to create modular
+                                        components, and efficient state
+                                        management was implemented using Recoil.
+                                        Each team member was responsible for key
+                                        features across various areas, including
+                                        the main home, algorithm problem pages,
+                                        chat, login/signup, my page, theme
+                                        settings, and problem IDE, enhancing the
+                                        overall quality of the project.
+                                    </p>
+                                    <p style="margin-bottom: 1rem">
+                                        <strong>UX Focus:</strong><br />
+                                        User experience was prioritized to
+                                        provide an interface that is easily
+                                        accessible and usable by everyone, while
+                                        also creating an immersive learning
+                                        environment through improvements in
+                                        visual accessibility.
+                                    </p>
+                                    <br />
+                                </div>
                             </article>
                         </div>
                     </div>
@@ -257,9 +432,7 @@
             <!-- 프로젝트 3: 여행 플랫폼 -->
             <section id="GroovyMap" class="research-section">
                 <header class="research-header">
-                    <p style="font-size: 2em; font-weight: bold">
-                        Design & Development
-                    </p>
+                    <p>Design & Development</p>
                     <div class="header-location">
                         <span class="header-title">GroovyMap</span>
                         <span class="header-location">2024</span>

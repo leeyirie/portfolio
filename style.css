@@ -1,11 +1,11 @@
 :root {
     --font-mono: 'Pretendard', sans-serif;
-    --font-heading: 'Poppins', sans-serif;
-    --color-bg: #ffffff;
-    --color-text: #000000;
-    --color-secondary: #333333;
-    --side-margin: 2rem; /* 좌우 여백 통일 */
-    --left-margin: 2rem; /* 왼쪽 여백 기준값 */
+    --font-heading: 'Pretendard', sans-serif;
+    --color-bg: #f0f0f0;
+    --color-text: #222222;
+    --color-secondary: #2b2b2b;
+    --side-margin: 1rem; /* 좌우 여백 통일 */
+    --left-margin: 1rem; /* 왼쪽 여백 기준값 */
 }
 
 * {
@@ -35,7 +35,7 @@ body {
 }
 
 .main-header h1 {
-    font-size: 100px; /* 헤딩 크기 조정 */
+    font-size: 100px; /* 기본 헤딩 크기 */
     font-weight: 700;
     letter-spacing: -0.02em;
     margin-bottom: 1rem; /* 여백 조정 */
@@ -56,10 +56,6 @@ body {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
-}
-
-.meta-label {
-    opacity: 0.6;
 }
 
 /* 네비게이션 스타일 */
@@ -181,6 +177,10 @@ body {
     .content-right p {
         font-size: 16px; /* 반응형 내용 크기 조정 */
     }
+
+    .research-outcomes {
+        background-color: var(--color-bg); /* 현재 배경색과 동일하게 설정 */
+    }
 }
 
 .research-container {
@@ -195,7 +195,8 @@ body {
 
 /* 리서치 콘텐츠 스타일 */
 .research-content {
-    display: flex; /* 플렉스 박스 사용 */
+    display: flex; /* 기본적으로 가로 방향 */
+    flex-direction: row; /* 웹사이트 사이즈에서 가로 방향 */
     flex: 1; /* 전체 높이 사용 */
     z-index: -5;
 }
@@ -207,13 +208,14 @@ body {
 }
 
 .research-info {
-    flex: 1; /* 1/4 비율 */
-    padding: 1rem;
-    background: transparent; /* 배경색 제거 */
+    flex: 1; /* 왼쪽 영역 */
+    padding: 1rem; /* 패딩 조정 */
+    position: sticky; /* 스크롤 시 고정 */
+    top: 20px; /* 상단에서 20px 떨어지도록 설정 */
+    z-index: -1; /* 다른 요소 위에 표시 */
+    margin-bottom: 5px; /* 아래 여백 조정 */
     height: calc(100vh - 100px); /* 전체 높이에서 상단 메타 높이 제외 */
     overflow-y: auto; /* 스크롤 가능 */
-    position: sticky; /* 스크롤 시 고정 */
-    z-index: 1; /* 헤더보다 낮은 z-index 설정 */
 }
 
 .research-title {
@@ -223,7 +225,8 @@ body {
 }
 
 .research-meta {
-    font-size: 14px;
+    font-size: 16px;
+    letter-spacing: 0.02rem;
     margin-bottom: 2rem;
 }
 
@@ -239,7 +242,7 @@ body {
 .current-image img {
     width: 100%;
     height: auto;
-    filter: grayscale(100%);
+    filter: grayscale(5%);
 }
 
 .image-number {
@@ -253,8 +256,8 @@ body {
 
 /* 오른쪽 결과물 그리드 */
 .research-outcomes {
-    flex: 3; /* 3/4 비율 */
-    padding: 1rem;
+    flex: 3; /* 오른쪽 영역 */
+    padding: 1rem; /* 패딩 조정 */
     overflow-y: auto; /* 스크롤 가능 */
 }
 
@@ -268,12 +271,12 @@ body {
     width: 100%;
     height: auto;
     margin-bottom: 1rem;
-    filter: grayscale(100%);
-    transition: filter 0.3s ease;
+    filter: grayscale(10%); /* 기본 그레이스케일 20% */
+    transition: filter 0.3s ease; /* 부드러운 전환 효과 */
 }
 
 .outcome-item:hover img {
-    filter: grayscale(0%);
+    filter: grayscale(0%); /* 마우스 오버 시 그레이스케일 제거 */
 }
 
 .outcome-item p {
@@ -317,6 +320,7 @@ body {
     grid-template-columns: 120px 1fr;
     gap: 60px;
     margin: 120px var(--left-margin); /* 왼쪽 여백 통일 */
+    padding: 20px; /* 기본 패딩 */
 }
 
 .label {
@@ -341,6 +345,7 @@ body {
     grid-template-columns: 120px 1fr;
     gap: 60px;
     margin: 120px var(--left-margin); /* 왼쪽 여백 통일 */
+    padding: 20px; /* 기본 패딩 */
 }
 
 .contents-meta {
@@ -356,13 +361,19 @@ body {
 }
 
 .meta-label {
-    font-size: 14px;
-    opacity: 0.6;
+    font-size: 17px;
+    font-weight: 150;
+    letter-spacing: 0.05rem;
+    color: var(--color-text);
     font-family: var(--font-mono);
 }
 
 .meta-value {
-    font-size: 16px;
+    font-size: 17px;
+    font-weight: 150;
+    margin-top: 0;
+    letter-spacing: 0.05rem;
+    color: var(--color-text);
     font-family: var(--font-mono);
 }
 
@@ -395,6 +406,17 @@ body {
         --side-padding: 15%;
         --left-margin: 2rem;
     }
+
+    .intro-section,
+    .contents-section {
+        grid-template-columns: 1fr; /* 세로 방향으로 변경 */
+        gap: 30px; /* 여백 조정 */
+        padding: 25px; /* 패딩 조정 */
+    }
+
+    .main-header h1 {
+        font-size: 70px; /* 12인치 패드에서 헤딩 크기 조정 */
+    }
 }
 
 @media (max-width: 768px) {
@@ -405,8 +427,9 @@ body {
 
     .intro-section,
     .contents-section {
-        grid-template-columns: 1fr;
-        gap: 20px;
+        grid-template-columns: 1fr; /* 세로 방향으로 변경 */
+        gap: 20px; /* 여백 조정 */
+        padding: 30px; /* 패딩 조정 */
     }
 
     .intro-text {
@@ -420,6 +443,42 @@ body {
 
     :root {
         --left-margin: 1rem;
+    }
+
+    .research-content {
+        flex-direction: column; /* 패드 및 모바일에서 세로 방향으로 변경 */
+    }
+
+    .research-info {
+        flex: none; /* 고정된 크기로 변경 */
+        margin-bottom: 5px; /* 모바일에서 아래 여백 조정 */
+    }
+
+    .research-title {
+        font-size: 20px; /* 모바일에서 제목 크기 조정 */
+    }
+
+    .research-meta {
+        font-size: 14px; /* 모바일에서 메타 정보 폰트 크기 조정 */
+    }
+
+    .research-outcomes {
+        padding: 0.5rem; /* 모바일에서 패딩 조정 */
+    }
+
+    .main-header h1 {
+        font-size: 48px; /* 11인치 패드에서 헤딩 크기 조정 */
+    }
+}
+
+@media (max-width: 480px) {
+    .intro-section,
+    .contents-section {
+        padding: 15px; /* 모바일에서 패딩 조정 */
+    }
+
+    .main-header h1 {
+        font-size: 32px; /* 모바일에서 헤딩 크기 조정 */
     }
 }
 
@@ -437,4 +496,64 @@ body {
 /* 마우스 효과 */
 body:hover {
     background-color: #f0f0f0; /* 마우스 오버 시 배경 색상 변경 */
+}
+
+/* 기본 헤더 타이틀 스타일 */
+.header-title {
+    font-size: 36px; /* 기본 폰트 크기 */
+    font-weight: 700;
+    margin-right: 10px;
+}
+
+/* 12인치 패드 (약 1024px) */
+@media (max-width: 1024px) {
+    .header-title {
+        font-size: 28px; /* 12인치 패드에서 폰트 크기 조정 */
+    }
+}
+
+/* 11인치 패드 (약 768px) */
+@media (max-width: 768px) {
+    .header-title {
+        font-size: 24px; /* 11인치 패드에서 폰트 크기 조정 */
+    }
+}
+
+/* 모바일 (약 480px) */
+@media (max-width: 480px) {
+    .header-title {
+        font-size: 20px; /* 모바일에서 폰트 크기 조정 */
+    }
+}
+
+/* 왼쪽 개요 설명 스크롤바 숨기기 */
+.research-info {
+    overflow-y: hidden; /* 수직 스크롤바 숨기기 */
+}
+
+/* 기존 CSS에 추가 */
+.research-header p {
+    font-size: 2em; /* 기본 폰트 크기 */
+    font-weight: 300; /* 폰트 굵기 */
+}
+
+/* 반응형: 12인치 패드 (약 1024px) */
+@media (max-width: 1024px) {
+    .research-header p {
+        font-size: 1.8em; /* 12인치 패드에서 폰트 크기 조정 */
+    }
+}
+
+/* 반응형: 11인치 패드 (약 768px) */
+@media (max-width: 768px) {
+    .research-header p {
+        font-size: 1.6em; /* 11인치 패드에서 폰트 크기 조정 */
+    }
+}
+
+/* 반응형: 모바일 (약 480px) */
+@media (max-width: 480px) {
+    .research-header p {
+        font-size: 1.4em; /* 모바일에서 폰트 크기 조정 */
+    }
 }
