@@ -1,7 +1,9 @@
 :root {
-    --font-mono: 'Roboto Mono', monospace;
+    --font-mono: 'Pretendard', sans-serif;
+    --font-heading: 'Poppins', sans-serif;
     --color-bg: #ffffff;
     --color-text: #000000;
+    --color-secondary: #333333;
     --side-margin: 2rem; /* 좌우 여백 통일 */
     --left-margin: 2rem; /* 왼쪽 여백 기준값 */
 }
@@ -22,7 +24,6 @@ body {
     transition: background-color 0.3s ease; /* 배경 색상 전환 */
 }
 
-
 .container {
     max-width: 1600px;
     margin: 0 auto;
@@ -30,21 +31,21 @@ body {
 /* 메인 헤더 스타일 */
 .main-header {
     text-align: left;
-    margin-bottom: calc(var(--spacing) * 4);
+    margin-bottom: 4rem; /* 여백 조정 */
 }
 
 .main-header h1 {
-    font-size: 120px;
+    font-size: 100px; /* 헤딩 크기 조정 */
     font-weight: 700;
     letter-spacing: -0.02em;
-    margin-bottom: calc(var(--spacing) * 3);
-    line-height: 1;
+    margin-bottom: 1rem; /* 여백 조정 */
+    line-height: 1.1; /* 줄 간격 조정 */
 }
 
 .header-meta {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: calc(var(--spacing) * 2);
+    gap: 1rem; /* 여백 조정 */
     font-size: 16px;
     letter-spacing: -0.01em;
     max-width: 1200px;
@@ -65,15 +66,15 @@ body {
 .main-nav {
     display: flex;
     justify-content: center;
-    gap: calc(var(--spacing) * 3);
-    margin-bottom: calc(var(--spacing) * 6);
+    gap: 2rem; /* 여백 조정 */
+    margin-bottom: 4rem; /* 여백 조정 */
     font-size: 16px;
 }
 
 .main-nav a {
     color: var(--color-text);
     text-decoration: none;
-    opacity: 0.6;
+    opacity: 0.8; /* 불투명도 조정 */
     transition: opacity 0.3s ease;
 }
 
@@ -92,8 +93,8 @@ body {
 .content-item {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: calc(var(--spacing) * 3);
-    padding: calc(var(--spacing) * 2) 0;
+    gap: 2rem; /* 여백 조정 */
+    padding: 2rem 0; /* 여백 조정 */
     border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
 
@@ -113,7 +114,7 @@ body {
 }
 
 .content-item h2 {
-    font-size: 42px;
+    font-size: 36px; /* 제목 폰트 크기 조정 */
     font-weight: 700;
     letter-spacing: -0.02em;
     line-height: 1.2;
@@ -127,14 +128,14 @@ body {
 }
 
 .content-right p {
-    font-size: 24px;
+    font-size: 26px; /* 프로젝트 내용 폰트 크기를 26px로 조정 */
     line-height: 1.4;
     opacity: 0.7;
     margin-bottom: 2rem;
 }
 
 .content-date {
-    font-size: 18px;
+    font-size: 16px; /* 날짜 폰트 크기 조정 */
     opacity: 0.5;
 }
 
@@ -151,34 +152,34 @@ body {
 /* 반응형 */
 @media (max-width: 1200px) {
     .main-header h1 {
-        font-size: 80px;
+        font-size: 70px; /* 반응형 헤딩 크기 조정 */
     }
 
     .content-item h2 {
-        font-size: 32px;
+        font-size: 28px; /* 반응형 제목 크기 조정 */
     }
 
     .content-right p {
-        font-size: 20px;
+        font-size: 18px; /* 반응형 내용 크기 조정 */
     }
 }
 
 @media (max-width: 768px) {
     .main-header h1 {
-        font-size: 48px;
+        font-size: 48px; /* 반응형 헤딩 크기 조정 */
     }
 
     .content-item {
         grid-template-columns: 1fr;
-        gap: var(--spacing);
+        gap: 1rem; /* 여백 조정 */
     }
 
     .content-item h2 {
-        font-size: 28px;
+        font-size: 24px; /* 반응형 제목 크기 조정 */
     }
 
     .content-right p {
-        font-size: 18px;
+        font-size: 16px; /* 반응형 내용 크기 조정 */
     }
 }
 
@@ -186,21 +187,17 @@ body {
     padding: 2rem;
 }
 
-
-
 /* 상단 메타 정보 스타일 */
 .research-header {
     top: 20px; /* 상단에서 20px 떨어지도록 설정 */
     padding: 10px 15px; /* 내부 여백 추가 */
 }
 
-
 /* 리서치 콘텐츠 스타일 */
 .research-content {
     display: flex; /* 플렉스 박스 사용 */
     flex: 1; /* 전체 높이 사용 */
     z-index: -5;
-
 }
 
 .research-section {
@@ -217,11 +214,12 @@ body {
     overflow-y: auto; /* 스크롤 가능 */
     position: sticky; /* 스크롤 시 고정 */
     z-index: 1; /* 헤더보다 낮은 z-index 설정 */
-    position: sticky;
 }
 
 .research-title {
     margin: 1rem 0 2rem;
+    font-family: var(--font-heading); /* 헤딩 폰트 적용 */
+    font-size: 24px; /* 리서치 제목 크기 조정 */
 }
 
 .research-meta {
@@ -236,7 +234,6 @@ body {
 .current-image {
     position: sticky;
     top: 0;
-    /* 추가 스타일링 */ㄴ
 }
 
 .current-image img {
@@ -330,10 +327,11 @@ body {
 }
 
 .intro-text {
-    font-family: 'Courier New', monospace;
-    font-size: 42px;
+    font-family: var(--font-mono); /* 인트로 텍스트에 프리텐다드 폰트 적용 */
+    font-size: 48px; /* 인트로 텍스트 폰트 크기 */
     line-height: 1.2;
-    letter-spacing: -0.02em;
+    font-weight: 300;
+    letter-spacing: 0.02em;
     max-width: 1200px;
 }
 
@@ -412,7 +410,8 @@ body {
     }
 
     .intro-text {
-        font-size: 32px;
+        font-size: 32px; /* 인트로 텍스트 반응형 폰트 크기 */
+        font-weight: 300;
     }
 
     .contents-meta {
@@ -439,4 +438,3 @@ body {
 body:hover {
     background-color: #f0f0f0; /* 마우스 오버 시 배경 색상 변경 */
 }
-
