@@ -662,7 +662,7 @@
             const callback = (entries) => {
                 entries.forEach((entry) => {
                     if (entry.isIntersecting) {
-                        history.pushState(null, null, `#${entry.target.id}`); // 주소 변경
+                        history.pushState(null, null, `/${entry.target.id}`); // 주소 변경
                     }
                 });
             };
